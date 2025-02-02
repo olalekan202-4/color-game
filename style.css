@@ -125,16 +125,16 @@ h1 {
 /* Responsive Design */
 @media (max-width: 600px) {
   .game-container {
-    width: 50%;
+    width: 100%;
   }
 
   #colorOptions {
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
   }
 
   .color-button {
-    width: 50%;
-    margin-left: 25%;
+    width: 20%;
+    margin-left: 10%;
   }
 }
