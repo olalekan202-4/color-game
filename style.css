@@ -1,0 +1,140 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: gray;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Game Container */
+.game-container {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Instructions */
+#gameInstructions {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Color Box */
+#colorBox {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 3px solid #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Color Options */
+#colorOptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.color-button {
+  width: 80px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Status */
+#gameStatus {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Scoreboard */
+.scoreboard {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* New Game Button */
+#newGameButton {
+  margin-top: 15px;
+  padding: 12px 18px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#newGameButton:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Animations */
+.correct {
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.wrong {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .game-container {
+    width: 50%;
+  }
+
+  #colorOptions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .color-button {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
